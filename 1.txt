@@ -1,0 +1,30 @@
+docker ps -a = список запущенных и остановленных контейнеров
+docker images = список локальных образов
+
+docker run -d -p 8080:80 nginx проброс порта 
+docker run image_name = создает и запускает новый контейнер
+docker run -d image_name = создает и запускает новый контейнер в фоновом режиме
+
+docker run -d --name "name" image_name = создает и запускает новый контейнер по имени в фоновом режиме
+
+docker run -it --rm busybox = после остановки удалит контейнер
+
+docker pull image_name = скачает образ
+docker rm container_id = удалит контейнер
+docker run -i -t(-it) busybox
+hostname (-i)
+docker container prune = удалить все контейнеры
+docker container inspect id_or_name
+docker stop id_or_name
+docker kill
+docker exec -it id_or_name 'process_name'
+docker run -v ${pwd}:/usr/share/nginx/html
+
+
+docker build . -t my_name:4.1.13
+
+
+
+docker-compose up(down) (-d) 
+docker-compose up -d --build
+docker logs id_name
