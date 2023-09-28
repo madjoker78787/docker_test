@@ -9,8 +9,8 @@ docker run -d --name "name" image_name = создает и запускает н
 
 docker run -it --rm busybox = после остановки удалит контейнер
 
-docker pull image_name = скачает образ
-docker rm container_id = удалит контейнер
+docker pull image_name = скачать образ
+docker rm container_id = удалить контейнер
 docker run -i -t(-it) busybox
 hostname (-i)
 docker container prune = удалить все контейнеры
@@ -26,5 +26,8 @@ docker build . -t my_name:4.1.13
 
 
 docker-compose up(down) (-d) 
-docker-compose up -d --build
+docker-compose up -d --build пересоздать образы
 docker logs id_name
+
+docker volume ls = список томов
+docker inspect "volume_name" = ифнормация тома
